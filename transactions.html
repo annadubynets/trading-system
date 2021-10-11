@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header d-flex justify-content-between align-items-center expanded-view-only">
+                <a class="navbar-brand me-0" href="index.html">
+                    <img src="images/logo.jpeg" alt="logo" class="navbar-brand-img d-inline-block">
+                </a>
+                <button id="sidebarCollapse" class="navbar-toggler toggle-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">
+                        <span class="icon-home sidebar-icon align-middle"></span>
+                        <span class="ps-3 expanded-view-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventory.html">
+                        <span class="icon-inventory sidebar-icon align-middle"></span>
+                        <span class="ps-3 expanded-view-only">Inventory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <span class="icon-orders sidebar-icon align-middle"></span>
+                        <span class="ps-3 expanded-view-only">Orders</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="transactions.html">
+                        <span class="icon-transactions sidebar-icon align-middle"></span>
+                        <span class="ps-3 expanded-view-only">Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="forms.html">
+                        <span class="icon-forms sidebar-icon align-middle"></span>
+                        <span class="ps-3 expanded-view-only">Forms</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="my-5 mx-3 expanded-view-only">
+                <a href="#"><span class="icon-log-out font-size-24px pe-3 align-middle"></span>Log Out</a>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content" class="w-100 p-4">
+            <div class="container">
+                <div class="row navbar-wrapper pb-32px">
+                    <div class="col-lg-8 mt-lg-0 mt-4">
+                        <h5>Transactions History</h5>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-between align-self-center">
+                        <div class="dropdown navbar-dropdown align-self-center d-block d-lg-none">
+                            <a class="nav-link dropdown-toggle text-white" href="transactions.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Transactions
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a href="index.html" class="dropdown-item">
+                                        <span class="icon-inventory sidebar-icon align-middle"></span>
+                                        <span class="ps-4">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="inventory.html" class="dropdown-item">
+                                        <span class="icon-orders sidebar-icon align-middle"></span>
+                                        <span class="ps-4 expanded-view-only">Inventory</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="orders.html" class="dropdown-item">
+                                        <span class="icon-transactions sidebar-icon align-middle"></span>
+                                        <span class="ps-4 expanded-view-only">Orders</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms.html" class="dropdown-item">
+                                        <span class="icon-forms sidebar-icon align-middle"></span>
+                                        <span class="ps-4 expanded-view-only">Forms</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ms-auto">
+                            <div class="align-self-center ms-2">
+                                <p><span class="icon-user font-size-24px pe-2 align-middle"></span>Cameron Williamson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between pb-32px">
+                    <form action="">
+                        <div class="input-group align-items-center mb-3">
+                            <span class="icon-search"></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+
+                    <div>
+                        <a href="#" class="btn btn-outline-dark me-2"><span class="icon-funnel font-size-24px align-middle pe-2"></span>Filter</a>
+
+                        <button type="button" class="btn btn-outline-dark">
+                            <span class="icon-settings font-size-24px"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive-xl text-nowrap">
+                            <table class="table table-hover w-auto">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date Completed<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Seller or Buyer Name<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Product<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Amount or Weight<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Price<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Tracking Number<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Email<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">PO Number<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Address and Geographic location<span class="icon-caret-down ps-2"></span></th>
+                                        <th scope="col">Phone Number<span class="icon-caret-down ps-2"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>03/01</td>
+                                        <td>Ralph Edwards</td>
+                                        <td>Rocket salad</td>
+                                        <td>536</td>
+                                        <td>$589.99</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>tim.jennings@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>1901 Thornridge Cir. Shiloh, Hawaii 81063</td>
+                                        <td>(603) 555-0123</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>03/06</td>
+                                        <td>Eleanor Pena</td>
+                                        <td>Natal plum</td>
+                                        <td>540</td>
+                                        <td>$782.01</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>jessica.hanson@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>8502 Preston Rd. Inglewood, Maine 98380</td>
+                                        <td>(505) 555-0125</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/12</td>
+                                        <td>Savannah Nguyen</td>
+                                        <td>Pasta</td>
+                                        <td>826</td>
+                                        <td>$475.22</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>kenzi.lawson@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>3517 W. Gray St. Utica, Pennsylvania 57867</td>
+                                        <td>(405) 555-0128</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/22</td>
+                                        <td>Albert Flores</td>
+                                        <td>Chicory leaves</td>
+                                        <td>738</td>
+                                        <td>$169.43</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>debra.holt@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                                        <td>(671) 555-0110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/28</td>
+                                        <td>Jane Cooper</td>
+                                        <td>Milk (Cow)</td>
+                                        <td>426</td>
+                                        <td>$275.43</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>georgia.young@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
+                                        <td>(209) 555-0104</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04/15</td>
+                                        <td>Devon Lane</td>
+                                        <td>Jute</td>
+                                        <td>453</td>
+                                        <td>$630.44</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>nevaeh.simmons@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>4517 Washington Ave. Manchester, Kentucky 39495</td>
+                                        <td>(316) 555-0116</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04/18</td>
+                                        <td>Jenny Wilson</td>
+                                        <td>Radish (var.)</td>
+                                        <td>423</td>
+                                        <td>$601.13</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>sara.cruz@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>2118 Thornridge Cir. Syracuse, Connecticut 35624</td>
+                                        <td>(225) 555-0118</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04/30</td>
+                                        <td>Wade Warren</td>
+                                        <td>Apricot</td>
+                                        <td>429</td>
+                                        <td>$576.28</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>alma.lawson@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                                        <td>(907) 555-0101</td>
+                                    </tr>
+                                    <tr>
+                                        <td>05/25</td>
+                                        <td>Jacob Jones</td>
+                                        <td>Bivalvia (Clam, Mussel)</td>
+                                        <td>177</td>
+                                        <td>$943.65</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>felicia.reid@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>2715 Ash Dr. San Jose, South Dakota 83475</td>
+                                        <td>(704) 555-0127</td>
+                                    </tr>
+                                    <tr>
+                                        <td>06/01</td>
+                                        <td>Darrell Steward</td>
+                                        <td>Buffalo</td>
+                                        <td>154</td>
+                                        <td>$928.41</td>
+                                        <td>34321231354</td>
+                                        <td>0125</td>
+                                        <td>deanna.curtis@example.com</td>
+                                        <td><span class="icon-map pe-2"></span>3891 Ranchview Dr. Richardson, California 62639</td>
+                                        <td>(303) 555-0105</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/typeahead.bundle.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
