@@ -61,8 +61,12 @@ a {
 
 .wrapper {
   display: flex;
-  width: 100%;
+  max-width: 100vw;
   align-items: stretch;
+}
+
+.page-content {
+  max-width: calc(100% - 240px);
 }
 
 #sidebar {
@@ -89,6 +93,15 @@ a {
 }
 #sidebar .sidebar-header .navbar-toggler:focus {
   box-shadow: none !important;
+}
+#sidebar.active .sidebar-header {
+  padding: 10px 16px;
+}
+#sidebar.active .sidebar-header .navbar-brand-img {
+  display: none !important;
+}
+#sidebar.active + .page-content {
+  max-width: calc(100% - 105px);
 }
 #sidebar ul.components {
   padding: 40px 0;
@@ -137,9 +150,6 @@ a[aria-expanded=true] {
 }
 #sidebar.active .expanded-view-only {
   display: none;
-}
-#sidebar.active .list-unstyled {
-  margin-top: 125px;
 }
 #sidebar.active .toggle-button {
   right: auto;
@@ -218,7 +228,7 @@ a[aria-expanded=true] {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 0px;
-  left: 10px;
+  left: 4px;
 }
 
 .animated-icon.open span:nth-child(2) {
@@ -232,7 +242,7 @@ a[aria-expanded=true] {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 17px;
-  left: 10px;
+  left: 4px;
 }
 
 .btn-dark {
@@ -283,6 +293,9 @@ a[aria-expanded=true] {
   border: none;
   padding: 14px 16px;
 }
+.input-group .form-control:focus {
+  box-shadow: none;
+}
 
 thead {
   font-size: 14px;
@@ -323,6 +336,9 @@ tbody {
 }
 .add-inventory-form .form-control::placeholder {
   color: #999999;
+}
+.add-inventory-form .form-control:focus {
+  box-shadow: none;
 }
 
 .modal-content {
