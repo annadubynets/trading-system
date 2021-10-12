@@ -52,6 +52,7 @@ h5 {
 p {
   padding: 0;
   margin: 0;
+  font-size: 14px;
 }
 
 a {
@@ -61,32 +62,35 @@ a {
   text-decoration: none;
 }
 
-.btn-dark {
+.btn-primary {
   font-size: 14px;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #0f2b8e;
   border-radius: 4px;
   padding: 12px 20px;
   border: none;
 }
+.btn-primary:focus {
+  background-color: #0f2b8e;
+}
 
-.btn-check:focus + .btn-dark,
-.btn-dark:focus,
+.btn-check:focus + .btn-primary,
+.btn-primary:focus,
 .btn-check:focus + .btn-outline-dark,
 .btn-outline-dark:focus {
   box-shadow: none;
 }
 
-.btn-check:active + .btn-dark:focus,
-.btn-check:checked + .btn-dark:focus,
-.btn-dark.active:focus,
-.btn-dark:active:focus,
-.show > .btn-dark.dropdown-toggle:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus,
 .btn-check:active + .btn-outline-dark:focus,
 .btn-check:checked + .btn-outline-dark:focus,
 .btn-outline-dark.active:focus,
 .btn-outline-dark:active:focus,
-.show > .btn-dark.dropdown-toggle:focus {
+.show > .btn-primary.dropdown-toggle:focus {
   box-shadow: none;
 }
 
@@ -155,6 +159,16 @@ tbody {
 }
 .add-inventory-form .form-control:focus {
   box-shadow: none;
+}
+.add-inventory-form .input-group {
+  width: initial;
+  border-bottom: none !important;
+  align-items: end;
+}
+.add-inventory-form .input-group .input-group-text {
+  background-color: transparent;
+  border: none;
+  padding: 12px;
 }
 
 .modal-content {

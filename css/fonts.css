@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?lk9doo');
-    src: url('../fonts/icomoon.eot?lk9doo#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?lk9doo') format('truetype'), url('../fonts/icomoon.woff?lk9doo') format('woff'), url('../fonts/icomoon.svg?lk9doo#icomoon') format('svg');
+    src: url('../fonts/icomoon.eot?x6stac');
+    src: url('../fonts/icomoon.eot?x6stac#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?x6stac') format('truetype'), url('../fonts/icomoon.woff?x6stac') format('woff'), url('../fonts/icomoon.svg?x6stac#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -42,6 +42,11 @@
 
 .icon-check-circle:before {
     content: "\e90d";
+}
+
+.icon-arrows-left-right:before {
+    content: "\e912";
+    color: #ccc;
 }
 
 .icon-settings:before {

@@ -1,18 +1,3 @@
-// $(document).ready(function() {
-
-//     $('#sidebarCollapse').on('click', function() {
-//         $('#sidebar').toggleClass('active');
-//     });
-
-// });
-
-// $(document).ready(function() {
-//     $('.toggle-button').on('click', function() {
-
-//         $('.animated-icon').toggleClass('open');
-//     });
-// });
-
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
