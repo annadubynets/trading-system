@@ -1,5 +1,5 @@
     @import "./bootstrap.min.css";
-    @import "./owl.carousel.min.css";
+    @import "./bootstrap-select.min.css";
     @import "fonts.css";
     @import "variables";
     * {
@@ -15,6 +15,10 @@
         font-size: 14px;
     }
     
+    label {
+        font-size: 14px;
+    }
+    
     a {
         font-size: 14px;
         color: $gray;
@@ -25,12 +29,12 @@
     .btn-primary {
         font-size: 14px;
         color: $white;
-        background-color: $blue;
+        background-color: $navy;
         border-radius: 4px;
         padding: 12px 20px;
         border: none;
         &:focus {
-            background-color: $blue;
+            background-color: $navy;
         }
     }
     
@@ -353,5 +357,64 @@
         width: calc(100% - 78px);
         transition: all 0.5s ease;
         border-left: 1px solid $silver;
-        padding-top: 32px;
+        padding: 32px 0;
+    }
+    
+    .page-link {
+        color: $black;
+        border: none;
+        &:focus {
+            color: $navy;
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+    
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: initial;
+    }
+    
+    .bootstrap-select {
+        .dropdown-menu {
+            font-size: 14px;
+            border: 1px solid $silver;
+            .dropdown-item {
+                &.active {
+                    background-color: $navy;
+                }
+                &:hover {
+                    background-color: $silver;
+                }
+            }
+        }
+    }
+    
+    .bootstrap-select>.dropdown-toggle {
+        width: initial;
+        &:after {
+            font-family: 'icomoon';
+            content: "\e901";
+            font-size: 12px;
+            border: none;
+        }
+    }
+    
+    .btn-light {
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none!important;
+            outline-offset: 0!important;
+        }
+    }
+    
+    .bootstrap-select .dropdown-toggle:focus,
+    .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+        outline: transparent!important;
     }

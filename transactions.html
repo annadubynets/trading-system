@@ -64,14 +64,14 @@
 
     <section class="home-section">
         <div class="container">
-            <div class="d-flex justify-content-between pb-32px">
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
                 <h5>Transactions History</h5>
                 <div class="align-self-center">
                     <p><span class="icon-user font-size-24px pe-2 align-middle"></span>Cameron Williamson</p>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between pb-32px">
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
                 <form action="">
                     <div class="input-group align-items-center mb-3">
                         <span class="icon-search"></span>
@@ -233,14 +233,52 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row d-flex mt-3">
+                <div class="col-6 d-flex align-items-center">
+                    <label>Items per page:</label>
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                          </select>
+                    </div>
+                    <label class="text-dark ps-3">1 – 10 of 128 items</label>
+                </div>
+                <div class="col-6 d-flex justify-content-end text-end align-items-center">
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                    </div>
+                    <label>of 13 pages</label>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span class="icon-pagination-prev font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="icon-pagination-next font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </section>
 
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/typeahead.bundle.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/scripts.js "></script>
 </body>
 
 </html>

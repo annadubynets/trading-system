@@ -1,5 +1,6 @@
+@charset "UTF-8";
 @import "./bootstrap.min.css";
-@import "./owl.carousel.min.css";
+@import "./bootstrap-select.min.css";
 @import "fonts.css";
 h1 {
   font-weight: 700;
@@ -15,6 +16,10 @@ h4 {
 h5 {
   font-weight: 700;
   font-size: 20px;
+}
+
+.font-size-16px {
+  font-size: 16px;
 }
 
 .font-size-20px {
@@ -42,6 +47,10 @@ h5 {
   border-bottom: 1px solid #CCCCCC;
 }
 
+.text-dark {
+  color: #666666 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +61,10 @@ h5 {
 p {
   padding: 0;
   margin: 0;
+  font-size: 14px;
+}
+
+label {
   font-size: 14px;
 }
 
@@ -377,7 +390,60 @@ tbody {
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   border-left: 1px solid #CCCCCC;
-  padding-top: 32px;
+  padding: 32px 0;
+}
+
+.page-link {
+  color: #000000;
+  border: none;
+}
+.page-link:focus {
+  color: #0f2b8e;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: initial;
+}
+
+.bootstrap-select .dropdown-menu {
+  font-size: 14px;
+  border: 1px solid #CCCCCC;
+}
+.bootstrap-select .dropdown-menu .dropdown-item.active {
+  background-color: #0f2b8e;
+}
+.bootstrap-select .dropdown-menu .dropdown-item:hover {
+  background-color: #CCCCCC;
+}
+
+.bootstrap-select > .dropdown-toggle {
+  width: initial;
+}
+.bootstrap-select > .dropdown-toggle:after {
+  font-family: "icomoon";
+  content: "";
+  font-size: 12px;
+  border: none;
+}
+
+.btn-light {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+.btn-light:hover, .btn-light:focus, .btn-light.active {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none !important;
+  outline-offset: 0 !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+  outline: transparent !important;
 }
 
 /*# sourceMappingURL=style.css.map */
