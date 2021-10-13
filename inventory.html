@@ -255,7 +255,7 @@
                     <form class="add-inventory-form">
                         <div class="mb-4">
                             <label for="inputProduct" class="form-label">Product</label>
-                            <input type="text" class="form-control" id="inputProduct" placeholder="Product Name">
+                            <input type="text" class="form-control" id="inputProduct" required placeholder="Product Name">
                         </div>
                         <div class="input-group justify-content-between mb-4">
                             <div>
@@ -301,9 +301,11 @@
                             <input type="number" class="form-control" id="inputDays" placeholder="0">
                         </div>
                         <div class="d-grid">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticSuccess" data-bs-dismiss="modal">
-                                    <span class="icon-check font-size-24px align-middle pe-2"></span>Submit
-                                </button>
+                            <button type="submit" class="btn btn-primary btn-create-inventory" 
+                                
+                            >
+                                <span class="icon-check font-size-24px align-middle pe-2"></span>Submit
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -1,5 +1,8 @@
 import {APIHelper} from './api.js'
 
+const fromId = '0x97442C45aBee017fEB3Bc528a51a849e32213cCb';
+const supplierId = 1;
+
 function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
@@ -38,8 +41,34 @@ function init() {
         });
 
         $('.content-table').removeClass('d-none');
+    });
 
+    $('.add-inventory-form').on('submit', e => {
+        e.preventDefault();
+        console.log('yes');
+        $('#staticAddInventory').modal('hide');
 
+        helper.createInventory(
+            fromId,
+            supplierId,
+            $('#inputProduct').val(),
+            '', 
+            'Liquid', 
+            $('#inputAvailableQuantity').val(), 
+            $('#inputExpectedQuantity').val(), 
+            1, 
+            $('#inputPrice').val()
+        ).then(inventory => {
+            tableData.prepend($(`<tr>
+                <td>${formatDate(inventory.date)}</td>
+                <td>${inventory.product.name}</td>
+                <td>${inventory.units}</td>
+                <td>${inventory.price}</td>
+                <td>${inventory.trackingNumber}</td>
+                <td>${inventory.sellerOrderNumber}</td>
+            </tr>`));
+            $('#staticSuccess').modal('show');
+        });
     });
 }
 
