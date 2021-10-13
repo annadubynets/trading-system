@@ -1,4 +1,4 @@
-import {APIHelper} from '/js/controllers/api.js'
+import {APIHelper} from './api.js'
 
 function formatDate(date) {
     var d = new Date(date),
