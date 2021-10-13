@@ -69,7 +69,7 @@
                 "SupplierID": supplierId,
                 "MinOrderPrice": price,
                 "PreferedPrice": price,
-                "__AvailabilityList": 2,
+                "__AvailabilityList": 2, // TODO: just hardcoded for now. figure out how to get it?
             }
         );
         console.log(createAvailabilityResponse);
