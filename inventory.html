@@ -69,7 +69,20 @@
                     <p><span class="icon-user font-size-24px pe-2 align-middle"></span>Cameron Williamson</p>
                 </div>
             </div>
+        </div>
 
+        <div class="container data-loader">
+            <div class="row justify-content-center">
+                <div class="col-5 text-center">
+                    <p>Loading...</p>
+                    <div class="spinner-border mt-4" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container content-table d-none">
             <div class="d-lg-flex d-block justify-content-between pb-32px">
                 <form>
                     <div class="input-group align-items-center mb-3">
@@ -82,102 +95,11 @@
                     <a href="#" class="btn btn-outline-dark me-2"><span class="icon-funnel font-size-24px align-middle pe-2"></span>Filter</a>
 
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticAddInventory">
-                            <span class="icon-plus font-size-24px align-middle pe-2"></span>Add Inventory
+                        <span class="icon-plus font-size-24px align-middle pe-2"></span>Add Inventory
                     </button>
 
-                    <div class="modal fade" id="staticAddInventory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticAddInventoryLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticAddInventoryLabel">Add Inventory</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="add-inventory-form">
-                                        <div class="mb-4">
-                                            <label for="inputProduct" class="form-label">Product</label>
-                                            <input type="text" class="form-control" id="inputProduct" placeholder="Product Name">
-                                        </div>
-                                        <div class="input-group justify-content-between mb-4">
-                                            <div>
-                                                <label for="inputAvailableQuantity" class="form-label">Available Quantity</label>
-                                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
-                                            </div>
-                                            <span class="icon-arrows-left-right font-size-24px input-group-text"></span>
-                                            <div>
-                                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
-                                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
-                                            </div>
-                                        </div>
-                                        <!-- <div class="row mb-4">
-                                            <div class="col-md-6">
-                                                <label for="inputAvailableQuantity" class="form-label">Available Quantity</label>
-                                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
-                                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
-                                            </div>
-                                        </div> -->
-                                        <div class="mb-4">
-                                            <label for="inputDate" class="form-label">Expected Crop Date</label>
-                                            <input type="date" class="form-control" id="inputDate" placeholder="MM/DD/YYYY">
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-md-6">
-                                                <label for="inputPrice" class="form-label">Price, $</label>
-                                                <input type="text" class="form-control" id="inputPrice" placeholder="0">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputOrderNumber" class="form-label">Seller Order Number</label>
-                                                <input type="text" class="form-control" id="inputOrderNumber" placeholder="0">
-                                            </div>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="inputProduct" class="form-label">Quality</label>
-                                            <input type="number" class="form-control" id="inputProduct" placeholder="0">
-                                        </div>
-                                        <div class="pb-32px">
-                                            <label for="inputDays" class="form-label">Shelf Life, days</label>
-                                            <input type="number" class="form-control" id="inputDays" placeholder="0">
-                                        </div>
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticSuccess" data-bs-dismiss="modal">
-                                                    <span class="icon-check font-size-24px align-middle pe-2"></span>Submit
-                                                </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="staticSuccess" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticSuccessLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-center">
-                                    <span class="icon-check-circle font-size-96px"></span>
-                                    <h4 class="pt-4 pb-32px">
-                                        New Inventory successfully added
-                                    </h4>
-                                    <div class="d-grid">
-                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got It</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-            <!-- <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div> -->
 
             <div class="row">
                 <div class="col-12">
@@ -193,7 +115,7 @@
                                     <th scope="col">Seller Order Number<span class="icon-caret-down ps-2"></span></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="table-data">
                                 <tr>
                                     <td>03/01</td>
                                     <td>Eggplants</td>
@@ -319,6 +241,96 @@
             </div>
         </div>
     </section>
+
+    <!-- Modals -->
+    
+    <div class="modal fade" id="staticAddInventory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticAddInventoryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticAddInventoryLabel">Add Inventory</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="add-inventory-form">
+                        <div class="mb-4">
+                            <label for="inputProduct" class="form-label">Product</label>
+                            <input type="text" class="form-control" id="inputProduct" placeholder="Product Name">
+                        </div>
+                        <div class="input-group justify-content-between mb-4">
+                            <div>
+                                <label for="inputAvailableQuantity" class="form-label">Available Quantity</label>
+                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
+                            </div>
+                            <span class="icon-arrows-left-right font-size-24px input-group-text"></span>
+                            <div>
+                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
+                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
+                            </div>
+                        </div>
+                        <!-- <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="inputAvailableQuantity" class="form-label">Available Quantity</label>
+                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
+                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
+                            </div>
+                        </div> -->
+                        <div class="mb-4">
+                            <label for="inputDate" class="form-label">Expected Crop Date</label>
+                            <input type="date" class="form-control" id="inputDate" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="inputPrice" class="form-label">Price, $</label>
+                                <input type="text" class="form-control" id="inputPrice" placeholder="0">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputOrderNumber" class="form-label">Seller Order Number</label>
+                                <input type="text" class="form-control" id="inputOrderNumber" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="inputProduct" class="form-label">Quality</label>
+                            <input type="number" class="form-control" id="inputProduct" placeholder="0">
+                        </div>
+                        <div class="pb-32px">
+                            <label for="inputDays" class="form-label">Shelf Life, days</label>
+                            <input type="number" class="form-control" id="inputDays" placeholder="0">
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticSuccess" data-bs-dismiss="modal">
+                                    <span class="icon-check font-size-24px align-middle pe-2"></span>Submit
+                                </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticSuccess" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <span class="icon-check-circle font-size-96px"></span>
+                    <h4 class="pt-4 pb-32px">
+                        New Inventory successfully added
+                    </h4>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
