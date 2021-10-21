@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <a href="#">
+                <img src="images/logo.jpeg" alt="logo" class="icon d-inline-block">
+            </a>
+            <span class="icon-list" id="btn"></span>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="index.html">
+                    <span class="icon-home font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li class="active">
+                <a href="inventory.html">
+                    <span class="icon-inventory font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Inventory</span>
+                </a>
+                <span class="tooltip">Inventory</span>
+            </li>
+            <li>
+                <a href="orders.html">
+                    <span class="icon-orders font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Orders</span>
+                </a>
+                <span class="tooltip">Orders</span>
+            </li>
+            <li>
+                <a href="transactions.html">
+                    <span class="icon-transactions font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Transactions</span>
+                </a>
+                <span class="tooltip">Transactions</span>
+            </li>
+            <li>
+                <a href="forms.html">
+                    <span class="icon-forms font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Forms</span>
+                </a>
+                <span class="tooltip">Forms</span>
+            </li>
+
+            <li class="logout">
+                <a href="#" id="log_out">
+                    <span class="icon-log-out font-size-24px sidebar-icon align-middle"></span><span class="links-name">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="container">
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
+                <h5>Requested Inventory</h5>
+                <div class="align-self-center">
+                    <p><span class="icon-user font-size-24px pe-2 align-middle"></span>Cameron Williamson</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container data-loader">
+            <div class="row justify-content-center">
+                <div class="col-5 text-center">
+                    <p>Loading...</p>
+                    <div class="spinner-border mt-4" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container content-table d-block">
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
+                <form>
+                    <div class="input-group align-items-center mb-3">
+                        <span class="icon-search"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+
+                <div>
+                    <a href="#" class="btn btn-outline-dark me-2"><span class="icon-funnel font-size-24px align-middle pe-2"></span>Filter</a>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticRequestInventory">
+                        <span class="icon-plus font-size-24px align-middle pe-2"></span>Request Inventory
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive text-nowrap">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date Posted<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Product<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Amount or Weight<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Price<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Tracking Number<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">PO Number<span class="icon-caret-down ps-2"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-data">
+                                <tr>
+                                    <td>03/01</td>
+                                    <td>Eggplants</td>
+                                    <td>50</td>
+                                    <td>$ 100</td>
+                                    <td>34321231354</td>
+                                    <td>34321231354</td>
+                                </tr>
+                                <tr>
+                                    <td>07/05</td>
+                                    <td>Okra</td>
+                                    <td>25 lbs</td>
+                                    <td>$ 35</td>
+                                    <td>12884629917</td>
+                                    <td>12884629917</td>
+                                </tr>
+                                <tr>
+                                    <td>02/20</td>
+                                    <td>Bananas</td>
+                                    <td>6 Bunches</td>
+                                    <td>$ 20</td>
+                                    <td>18834882323</td>
+                                    <td>18834882323</td>
+                                </tr>
+                                <tr>
+                                    <td>09/20</td>
+                                    <td>Peppers</td>
+                                    <td>10 lbs</td>
+                                    <td>$ 125</td>
+                                    <td>44876347734</td>
+                                    <td>44876347734</td>
+                                </tr>
+                                <tr>
+                                    <td>07/05</td>
+                                    <td>Egg plants</td>
+                                    <td>50</td>
+                                    <td>$ 100</td>
+                                    <td>34321231354</td>
+                                    <td>34321231354</td>
+                                </tr>
+                                <tr>
+                                    <td>07/05</td>
+                                    <td>Okra</td>
+                                    <td>25 lbs</td>
+                                    <td>$ 35</td>
+                                    <td>12884629917</td>
+                                    <td>12884629917</td>
+                                </tr>
+                                <tr>
+                                    <td>02/20</td>
+                                    <td>Bananas</td>
+                                    <td>6 Bunches</td>
+                                    <td>$ 20</td>
+                                    <td>18834882323</td>
+                                    <td>18834882323</td>
+                                </tr>
+                                <tr>
+                                    <td>09/20</td>
+                                    <td>Peppers</td>
+                                    <td>10 lbs</td>
+                                    <td>$ 125</td>
+                                    <td>44876347734</td>
+                                    <td>44876347734</td>
+                                </tr>
+                                <tr>
+                                    <td>07/05</td>
+                                    <td>Egg plants</td>
+                                    <td>50</td>
+                                    <td>$ 100</td>
+                                    <td>34321231354</td>
+                                    <td>34321231354</td>
+                                </tr>
+                                <tr>
+                                    <td>07/05</td>
+                                    <td>Okra</td>
+                                    <td>25 lbs</td>
+                                    <td>$ 35</td>
+                                    <td>12884629917</td>
+                                    <td>12884629917</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex mt-3">
+                <div class="col-6 d-flex align-items-center">
+                    <label>Items per page:</label>
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                          </select>
+                    </div>
+                    <label class="text-dark ps-3">1 – 10 of 128 items</label>
+                </div>
+                <div class="col-6 d-flex justify-content-end text-end align-items-center">
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                    </div>
+                    <label>of 13 pages</label>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span class="icon-pagination-prev font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="icon-pagination-next font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="staticRequestInventory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticRequestInventoryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticRequestInventoryLabel">Request Inventory</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="add-inventory-form">
+                        <div class="mb-4">
+                            <label for="inputProduct" class="form-label">Products Requested</label>
+                            <input type="text" class="form-control" id="inputProduct" placeholder="Product names (comma separated)">
+                        </div>
+                        <div class="input-group justify-content-between mb-4">
+                            <div>
+                                <label for="inputAvailableQuantity" class="form-label">Min. Quantity</label>
+                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
+                            </div>
+                            <span class="icon-arrows-left-right font-size-24px input-group-text"></span>
+                            <div>
+                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
+                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
+                            </div>
+                        </div>
+                        <!-- <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="inputAvailableQuantity" class="form-label">Available Quantity</label>
+                                <input type="text" class="form-control" id="inputAvailableQuantity" placeholder="0">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputExpectedQuantity" class="form-label">Expected Quantity</label>
+                                <input type="text" class="form-control" id="inputExpectedQuantity" placeholder="0">
+                            </div>
+                        </div> -->
+                        <label class="form-label">Delivery Time Frame</label>
+                        <div class="input-group justify-content-between mb-4">
+
+                            <input type="date" class="form-control" id="inputStartDate" placeholder="MM/DD/YYYY">
+
+                            <span class="icon-arrows-left-right font-size-24px input-group-text"></span>
+
+                            <input type="date" class="form-control" id="inputEndDate" placeholder="MM/DD/YYYY">
+
+                        </div>
+                        <div class="mb-4">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Location">
+                        </div>
+                        <div class="mb-4">
+                            <label for="inputPONumber" class="form-label">PO Number</label>
+                            <input type="number" class="form-control" id="inputPONumber" placeholder="XXXXXXXXX">
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticSuccess" data-bs-dismiss="modal">
+                                    <span class="icon-check font-size-24px align-middle pe-2"></span>Submit
+                                </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticSuccess" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <span class="icon-check-circle font-size-96px"></span>
+                    <h4 class="pt-4 pb-32px">
+                        New Request successfully added
+                    </h4>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/controllers/api.js"></script>
+    <script src="js/scripts.js "></script>
+    <script type="module" src="js/controllers/inventory.js"></script>
+</body>
+
+</html>
