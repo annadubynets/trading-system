@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <a href="#">
+                <img src="images/logo.jpeg" alt="logo" class="icon d-inline-block">
+            </a>
+            <span class="icon-list" id="btn"></span>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="index.html">
+                    <span class="icon-home font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="inventory.html">
+                    <span class="icon-inventory font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Inventory</span>
+                </a>
+                <span class="tooltip">Inventory</span>
+            </li>
+            <li>
+                <a href="orders.html">
+                    <span class="icon-orders font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Orders</span>
+                </a>
+                <span class="tooltip">Orders</span>
+            </li>
+            <li class="active">
+                <a href="transactions.html">
+                    <span class="icon-transactions font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Transactions</span>
+                </a>
+                <span class="tooltip">Transactions</span>
+            </li>
+            <li>
+                <a href="forms.html">
+                    <span class="icon-forms font-size-24px sidebar-icon align-middle"></span>
+                    <span class="links-name">Forms</span>
+                </a>
+                <span class="tooltip">Forms</span>
+            </li>
+
+            <li class="logout">
+                <a href="#" id="log_out">
+                    <span class="icon-log-out font-size-24px sidebar-icon align-middle"></span><span class="links-name">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="container">
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
+                <h5>Transactions History</h5>
+                <div class="align-self-center">
+                    <p><span class="icon-user font-size-24px pe-2 align-middle"></span>Cameron Williamson</p>
+                </div>
+            </div>
+
+            <div class="d-lg-flex d-block justify-content-between pb-32px">
+                <form action="">
+                    <div class="input-group align-items-center mb-3">
+                        <span class="icon-search"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+
+                <div>
+                    <a href="#" class="btn btn-outline-dark me-2"><span class="icon-funnel font-size-24px align-middle pe-2"></span>Filter</a>
+
+                    <button type="button" class="btn btn-outline-dark">
+                            <span class="icon-settings font-size-24px"></span>
+                        </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive text-nowrap">
+                        <table class="table table-hover w-auto">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date Completed<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Seller or Buyer Name<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Product<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Amount or Weight<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Price<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Tracking Number<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Email<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">PO Number<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Address and Geographic location<span class="icon-caret-down ps-2"></span></th>
+                                    <th scope="col">Phone Number<span class="icon-caret-down ps-2"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>03/01</td>
+                                    <td>Ralph Edwards</td>
+                                    <td>Rocket salad</td>
+                                    <td>536</td>
+                                    <td>$589.99</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>tim.jennings@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>1901 Thornridge Cir. Shiloh, Hawaii 81063</td>
+                                    <td>(603) 555-0123</td>
+
+                                </tr>
+                                <tr>
+                                    <td>03/06</td>
+                                    <td>Eleanor Pena</td>
+                                    <td>Natal plum</td>
+                                    <td>540</td>
+                                    <td>$782.01</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>jessica.hanson@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>8502 Preston Rd. Inglewood, Maine 98380</td>
+                                    <td>(505) 555-0125</td>
+                                </tr>
+                                <tr>
+                                    <td>03/12</td>
+                                    <td>Savannah Nguyen</td>
+                                    <td>Pasta</td>
+                                    <td>826</td>
+                                    <td>$475.22</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>kenzi.lawson@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>3517 W. Gray St. Utica, Pennsylvania 57867</td>
+                                    <td>(405) 555-0128</td>
+                                </tr>
+                                <tr>
+                                    <td>03/22</td>
+                                    <td>Albert Flores</td>
+                                    <td>Chicory leaves</td>
+                                    <td>738</td>
+                                    <td>$169.43</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>debra.holt@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                                    <td>(671) 555-0110</td>
+                                </tr>
+                                <tr>
+                                    <td>03/28</td>
+                                    <td>Jane Cooper</td>
+                                    <td>Milk (Cow)</td>
+                                    <td>426</td>
+                                    <td>$275.43</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>georgia.young@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
+                                    <td>(209) 555-0104</td>
+                                </tr>
+                                <tr>
+                                    <td>04/15</td>
+                                    <td>Devon Lane</td>
+                                    <td>Jute</td>
+                                    <td>453</td>
+                                    <td>$630.44</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>nevaeh.simmons@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>4517 Washington Ave. Manchester, Kentucky 39495</td>
+                                    <td>(316) 555-0116</td>
+                                </tr>
+                                <tr>
+                                    <td>04/18</td>
+                                    <td>Jenny Wilson</td>
+                                    <td>Radish (var.)</td>
+                                    <td>423</td>
+                                    <td>$601.13</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>sara.cruz@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>2118 Thornridge Cir. Syracuse, Connecticut 35624</td>
+                                    <td>(225) 555-0118</td>
+                                </tr>
+                                <tr>
+                                    <td>04/30</td>
+                                    <td>Wade Warren</td>
+                                    <td>Apricot</td>
+                                    <td>429</td>
+                                    <td>$576.28</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>alma.lawson@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                                    <td>(907) 555-0101</td>
+                                </tr>
+                                <tr>
+                                    <td>05/25</td>
+                                    <td>Jacob Jones</td>
+                                    <td>Bivalvia (Clam, Mussel)</td>
+                                    <td>177</td>
+                                    <td>$943.65</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>felicia.reid@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>2715 Ash Dr. San Jose, South Dakota 83475</td>
+                                    <td>(704) 555-0127</td>
+                                </tr>
+                                <tr>
+                                    <td>06/01</td>
+                                    <td>Darrell Steward</td>
+                                    <td>Buffalo</td>
+                                    <td>154</td>
+                                    <td>$928.41</td>
+                                    <td>34321231354</td>
+                                    <td>0125</td>
+                                    <td>deanna.curtis@example.com</td>
+                                    <td><span class="icon-map pe-2"></span>3891 Ranchview Dr. Richardson, California 62639</td>
+                                    <td>(303) 555-0105</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex mt-3">
+                <div class="col-6 d-flex align-items-center">
+                    <label>Items per page:</label>
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                          </select>
+                    </div>
+                    <label class="text-dark ps-3">1 – 10 of 128 items</label>
+                </div>
+                <div class="col-6 d-flex justify-content-end text-end align-items-center">
+                    <div class="select">
+                        <select class="selectpicker">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                    </div>
+                    <label>of 13 pages</label>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span class="icon-pagination-prev font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="icon-pagination-next font-size-16px" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/scripts.js "></script>
+</body>
+
+</html>
