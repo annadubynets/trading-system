@@ -19,8 +19,8 @@ function formatDate(date) {
 
 function init() {
     const helper = new APIHelper(
-        '80db43f2e19893045c3292a4f2df70eef33b0d774a6072b2afd3647f89dc9c89',
-        'https://api.simbachain.com/v1/UVI_September21/'
+        'e29ec2f1bef4fbad0da6e1f08cf3be2f926ec552dc8e7ab8662e38ace0b3674e',
+        'https://api.simbachain.com/v1/UVIDEMO/'
     );
 
     let tableData = $('.table-data');

@@ -27,7 +27,7 @@
     };
 
     async findProductById(productId) {
-        const url = `${this.baseUrl}Product/?ID_number_equals=${productId}`
+        const url = `${this.baseUrl}Products/?ID_number_equals=${productId}`
         const response = await this.getData(url);
         if (response.count == 0 || !Array.isArray(response.results)) {
             return [];
@@ -46,14 +46,14 @@
         const product = Date.now();
         const id = Math.floor(Math.random() * 120);
         let createProductResponse = await this.postData(
-            `${this.baseUrl}Product/`,
+            `${this.baseUrl}Products/`,
             {
                 "from": from,
                 "Name": name,
                 "Type": type,
                 "Description": description,
-                "ID_number": id,
-                "__Product": product
+                "IDnumber": id,
+                "__Products": product
             }
         );
         console.log(createProductResponse);
